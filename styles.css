@@ -63,7 +63,7 @@
   .container {
     
     background-color: hsl(216, 50%, 16%);
-    border-radius: 10px;
+    border-radius: 15px;
     width: 90%; /* Makes it responsive */
     max-width: 375px; /* Adjust this based on the design */
     margin: 0 auto; /* Centers it */
@@ -125,7 +125,8 @@
 .nft__name {
     padding-top: 20px;
     color: hsl(0, 0%, 100%);
-    font-size: 0.65rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .nft__name:hover{
