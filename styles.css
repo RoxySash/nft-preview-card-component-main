@@ -1,0 +1,204 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+
+    font-family: "Outfit", sans-serif;
+    background-color:hsl(217, 54%, 11%);
+    margin: 0; /* Centers it */
+    padding: 1rem; /* Prevents content from touching edges */
+    min-height: 100vh; /* Ensures the body takes up the full screen */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    
+    color: hsl(215, 51%, 70%);
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* my css below mobile first */
+
+  .container {
+    
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    width: 90%; /* Makes it responsive */
+    max-width: 375px; /* Adjust this based on the design */
+    margin: 0 auto; /* Centers it */
+    padding: 1.6rem; /* Prevents content from touching edges */
+    
+  }
+
+  /* had to do some research for this section */
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+
+  .image-container img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 188, 212, 0); /* Start as fully transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+    
+  }
+
+  .overlay img {
+    width: 50px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+
+  .image-container:hover .overlay
+   {
+    cursor: pointer;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 1;
+  }
+  
+  .cube {
+    border-radius: 10px;
+  }
+
+/* The overlay effect - lays on top of the container and over the image */
+.nft__name {
+    padding-top: 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.nft__name:hover{
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.nft__description {
+    padding-top: 15px;
+}
+
+.profile__section--pic img{
+  border-radius: 5px solid white;
+}
+
+.ethereum__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile__section {
+  display: flex;
+}
+
+.time__ether {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.ethereum__section--amount {
+  color: hsl(178, 100%, 50%);
+  padding-left: 5px;
+}
+
+.time__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.time__section--amount {
+  padding-left: 5px;
+}
+
+.profile__section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile__section--pic {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.5px white;
+  margin-right: 20px;
+}
+
+.nft__owner {
+  color: white;
+}
+
+.nft__owner:hover{
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+hr {
+  height: 0.2px;
+  background-color: hsl(215, 32%, 27%);
+  border-width: 0;
+}
