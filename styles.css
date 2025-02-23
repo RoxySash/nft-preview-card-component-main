@@ -69,6 +69,7 @@
     margin: 0 auto; /* Centers it */
     padding: 1.6rem; /* Prevents content from touching edges */
     
+    
   }
 
   /* had to do some research for this section */
@@ -124,6 +125,7 @@
 .nft__name {
     padding-top: 20px;
     color: hsl(0, 0%, 100%);
+    font-size: 0.65rem;
 }
 
 .nft__name:hover{
